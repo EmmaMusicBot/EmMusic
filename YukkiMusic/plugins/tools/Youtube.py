@@ -5,15 +5,16 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 import requests
 import os
+from strings.filters import command
 from YukkiMusic import app
 
-@app.on_message(filters.command(['s']))
+@app.on_message(command(['تحميل','بحث','تنزيل']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠...')
+    m = message.reply('- يتم البحث أنتظر لطفاً 🔍')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -43,21 +44,21 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐓𝐫𝐲 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐓𝐡𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐀 𝐋𝐢𝐭𝐭𝐥𝐞 😕')
+            m.edit('لا شيء ! حاول ارسال اسم الاغنية بشكل صحيح فضلاً.')
             return
     except Exception as e:
         m.edit(
-            "✖️ 𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐒𝐨𝐫𝐫𝐲.\n\n𝐓𝐫𝐲 𝐀𝐧𝐨𝐭𝐡𝐞𝐫 𝐊𝐞𝐲𝐰𝐨𝐫𝐤 𝐎𝐫 𝐌𝐚𝐲𝐛𝐞 𝐒𝐩𝐞𝐥𝐥 𝐈𝐭 𝐏𝐫𝐨𝐩𝐞𝐫𝐥𝐲.\n\nEg.`/s Faded`"
+            "خطأ ! يرجى البحث هكذا .. مثال : تحميل ريمكس."
         )
         print(str(e))
         return
-    m.edit("🔎 𝐅𝐢𝐧𝐝𝐢𝐧𝐠 𝐀 𝐒𝐨𝐧𝐠 🎶 𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭 ⏳️ 𝐅𝐨𝐫 𝐅𝐞𝐰 𝐒𝐞𝐜𝐨𝐧𝐝𝐬 [🚀](https://telegra.ph/file/67f41ae52a85dfc0551ae.mp4)")
+    m.edit("يتم تحميل الأغنية أنتظر لحظة .. [🚀](https://te.legra.ph/file/7d61b1f46ca10bc870d7c.jpg)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 𝐓𝐢𝐭𝐥𝐞 : [{title[:35]}]({link})\n⏳ 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 : `{duration}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 𝐕𝐢𝐞𝐰𝐬 : `{views}`\n\n💌 𝐁𝐲 : @SongPlayRoBot'
+        rep = f'🎧 الأغنية : [{title[:35]}]({link})\n⏳ الوقت : `{duration}`\n🎬 المصدر : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 المشاهدات : `{views}`\n\n💌 بواسطة : @aprilmubot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -65,7 +66,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('❌ 𝐄𝐫𝐫𝐨𝐫\n\n Report This Erorr To Fix @sspaa ❤️')
+        m.edit('- حدث خطأ تواصل مع مطوري : @ccbee 🤍')
         print(e)
     try:
         os.remove(audio_file)
