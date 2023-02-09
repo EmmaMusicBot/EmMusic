@@ -13,7 +13,7 @@ def a(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('- يتم البحث أنتظر لطفاً 🔍')
-    ydl_opts = {"format": "bestaudio[ext=m3a]"}
+    ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
         count = 0
