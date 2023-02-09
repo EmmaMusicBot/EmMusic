@@ -1,10 +1,7 @@
 from pyrogram import Client, filters
-from pyrogram.types import (
-InlineKeyboardButton,InlineKeyboardMarkup)
-import yt_dlp
+import youtube_dl
 from youtube_search import YoutubeSearch
 import requests
-import os
 from strings.filters import command
 from YukkiMusic import app
 
