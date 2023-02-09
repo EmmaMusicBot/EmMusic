@@ -61,9 +61,9 @@ def get_file_id(msg: Message):
 )
 async def madison(client: Client, message: Message):
     if message.from_user.id in SUDOERS:
-        await message.reply_text(f"- يا {message.from_user.mention}\n- رتبتك هي مطور ايما .")
+        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي مطور بوت ايما .")
     else:
-        await message.reply_text(f"- يا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
         
 @app.on_message(
     command(["رتبتي"])
@@ -72,6 +72,6 @@ async def madison(client: Client, message: Message):
 )
 async def ruteb(client: Client, message: Message):
     if message.from_user.id in AUTH:
-        await message.reply_text(f"- يا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
     else:
-        await message.reply_text(f"- يا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
