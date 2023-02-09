@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from YukkiMusic import app
 
 @app.on_message(
-    filters.command(["z","Z"])
+    filters.command(["."])
     & filters.group
     & ~filters.edited
 )
