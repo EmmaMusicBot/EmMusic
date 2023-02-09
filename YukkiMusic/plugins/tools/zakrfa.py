@@ -1,17 +1,22 @@
 import random
 import re
-
+from strings.filters import command
 from pyrogram import Client
 from pyrogram.types import Message
+from YukkiMusic import app
 
-@app.on_message(command("زخرفة"))
+@app.on_message(
+    command(["زخرفه"])
+    & filters.group
+    & ~filters.edited
+)
 async def zahrafa(c: Client, m: Message):
     if len(m.text) > 300:
-        await m.reply_text("◍ لا يمكنك زخرفه اكثر من 20 حرف ارسل مجددا\n√", reply_to_message_id=m.message_id)
+        await m.reply_text("- لا يمكنك زخرفه اكثر من 20 حرف ارسل مجددا\n√", reply_to_message_id=m.message_id)
         return
     else:
         if re.match("\n", str(m.text)):
-            await m.reply_text("◍ لا يمكن زخرفه نص يحتوي على اكثر من سطر\n√", reply_to_message_id=m.message_id)
+            await m.reply_text("- لا يمكن زخرفه نص يحتوي على اكثر من سطر\n√", reply_to_message_id=m.message_id)
             return
     EmojeS = [
         ' 𓁻',
