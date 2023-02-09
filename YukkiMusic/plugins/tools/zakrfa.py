@@ -1,7 +1,7 @@
 import random
 import re
 from strings.filters import command
-from pyrogram import Client
+from pyrogram import Client, filters
 from pyrogram.types import Message
 from YukkiMusic import app
 
