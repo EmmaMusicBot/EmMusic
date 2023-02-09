@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import (
 InlineKeyboardButton,InlineKeyboardMarkup)
-import youtube_dl
+import yt_dlp
 from youtube_search import YoutubeSearch
 import requests
 import os
