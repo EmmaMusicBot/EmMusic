@@ -3,7 +3,7 @@ from pyrogram.types import Message
 import os
 import asyncio
 from pyrogram import enums
-from pyrogram.enums import ChatMemberStatus
+from pyrogram import ChatMemberStatus
 from pyrogram.errors import FloodWait
 from YukkiMusic import app
 
