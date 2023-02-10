@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import os
+from pyrogram import FloodWait
 import asyncio
 from YukkiMusic import app
 
