@@ -55,23 +55,23 @@ def get_file_id(msg: Message):
 
 
 @app.on_message(
-    command(["رتبتي"])
+    command(["ايدي","ا","رتبتي"])
     & filters.group
     & ~filters.edited
 )
 async def madison(client: Client, message: Message):
     if message.from_user.id in SUDOERS:
-        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي مطور بوت ايما .")
+        await message.reply_text(f"- أسمك : {message.from_user.mention}\n- آيديك : ```{message.from.id}``` .\n- رتبتبك : مطور بوت ايما .")
     else:
-        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أسمك : {message.from_user.mention}\n- آيديك : ```{message.from.id}``` .\n- رتبتبك : مطور بوت ايما .")
         
 @app.on_message(
-    command(["رتبتي"])
+    command(["رتبتي","ايدي","ا"])
     & filters.group
     & ~filters.edited
 )
 async def ruteb(client: Client, message: Message):
     if message.from_user.id in AUTH:
-        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أسمك : {message.from_user.mention}\n- آيديك : ```{message.from.id}``` .\n- رتبتبك : عضو في بوت ايما .")
     else:
-        await message.reply_text(f"- أهلا {message.from_user.mention}\n- رتبتك هي عضو في بوت ايما .")
+        await message.reply_text(f"- أسمك : {message.from_user.mention}\n- آيديك : ```{message.from.id}``` .\n- رتبتبك : عضو في بوت ايما .")
