@@ -31,26 +31,14 @@ SONG_COMMAND = get_command("SONG_COMMAND")
 
 
 @app.on_message(
-    command(["do"])
+    command(["بحث","تحميل"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
 @app.on_message(
-    command(["do"])
+    command(["بحث","تحميل"])
     & filters.private
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@app.on_message(
-    command(["do"])
-    & filters.private
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@app.on_message(
-    command(["do"])
-    & filters.channel
     & ~filters.edited
     & ~BANNED_USERS
 )
