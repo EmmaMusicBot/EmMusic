@@ -17,8 +17,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "20634251"))
-API_HASH = getenv("API_HASH", "48c8357d63dd602417a6eb1f7c164c8c")
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "")
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN", "5769323:AuVaP3NXIiqfI8mIBj7zLhax-zy5U4jYA")
@@ -84,7 +84,7 @@ AUTO_SUGGESTION_TIME = int(
 )  # Remember to give value in Seconds
 
 # Set it True if you want to delete downloads after the music playout ends from your downloads folder
-AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", None)
+AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 
 # Set it True if you want to bot to suggest about bot commands to random chats of your bots.
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", None)
@@ -138,7 +138,7 @@ SET_CMDS = getenv("SET_CMDS", False)
 
 # STRING2 = getenv("STRING_SESSION2", NYou'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot")
 STRING1 = getenv("STRING_SESSION", "BABnNCgwkbBq0YzC1lwRozbJ5mTdrBK51ncv3tkOz7pN4zVCLx48T1vu--P9Sh8GU6xhaTnOXwPC-bwQ-xXismTXfPeFdVF5F4oObAQECdc2HVgqWNxvp9iFg-Rz3ggdEkyfARpMzT9z-6ezJrJKx0JbIh9cW1BkSFkz3TddXvil6-wm280XcfFmW9LID7prfidJqFMMRJlkXzKnz5jyoe-xgBinlVrrQciSc9gUBJ6iGMllJtfnVvZgcws6oISVTaGdzhU6tkV-jVKQRZUNMFE_3IffdM8Qnjd3m6_b-xgExCIBqKHzHzGv5KnvNPpXic8sbhUEmwxChGenMvmHYW5qAAAAAWES_XAA")
-STRING2 = getenv("STRING_SESSION2", "BAAcQZNUrC5mKRqOb7JiqwMwt9hdQCHs4NvZfwlwlsZTtCgU9iHsLiKVOODTbj4hLMcb7ClRnXfC4kg9guHYn8PiH8zjS6edyOoDW6Klhf6DnZipR1PKjNxhq0qG-pTMbvybOQQPiyZJBSej5vYgr4nbd8fVWRDjDDuFx_sAIv-UIADbHBf1UY_Ik3BfKDhp4Zsx_2Pg046n2vdyRUHB_C_VRdOqQ7ZwF_SEsRDsiXKI-CiCUZZcFcVPmkWeKFyDdsSH1fM1iINoEitRWhMiKvyHfYqwpX0JVchUld2TJIQexxH9bXP0qTY_7OcxH_nxZ4Og_a3AWpNG8LOW-FhUFGF_AAAAAWwqHCQA")
+STRING2 = getenv("STRING_SESSION2, "")
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
