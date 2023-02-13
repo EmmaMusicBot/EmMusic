@@ -2,6 +2,7 @@ aiofiles
 aiohttp
 asyncio
 dnspython
+git+https://github.com/martyzz1/heroku3.py
 ffmpeg-python
 gitpython
 git+https://github.com/vstinner/hachoir
