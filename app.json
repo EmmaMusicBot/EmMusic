@@ -56,7 +56,7 @@
       "STRING_SESSION2": {
         "description": "A Pyrogram String Session. One Assistant is Compulsory.",
         "value": "",
-        "required": true
+        "required": false
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
@@ -76,7 +76,7 @@
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
         "value": "https://github.com/TeamYukki/YukkiMusicBot",
-        "required": true
+        "required": false
       },
       "UPSTREAM_BRANCH": {
         "description": "Upstream Repo's Branch Name",
