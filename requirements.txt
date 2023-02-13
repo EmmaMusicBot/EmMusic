@@ -21,4 +21,3 @@ tgcrypto
 youtube-search
 youtube-search-python
 yt-dlp
-youtube_dl
