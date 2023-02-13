@@ -6,7 +6,7 @@ ffmpeg-python
 gitpython
 hachoir
 lyricsgenius
-motor==3.0.0
+git+https://github.com/mongodb/motor
 pillow
 psutil
 py-tgcalls==0.8.6
