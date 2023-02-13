@@ -4,7 +4,7 @@ asyncio
 dnspython
 ffmpeg-python
 gitpython
-hachoir
+https://github.com/vstinner/hachoir
 lyricsgenius
 git+https://github.com/mongodb/motor
 git+https://github.com/python-pillow/Pillow
