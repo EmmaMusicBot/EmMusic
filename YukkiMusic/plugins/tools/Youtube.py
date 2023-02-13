@@ -50,13 +50,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("يتم تحميل الأغنية أنتظر لحظة .. [🚀](https://te.legra.ph/file/7d61b1f46ca10bc870d7c.jpg)")
+    m.edit("- أنتظر لحظة من فضلك يا روحي 🔍..")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 الأغنية : [{title[:35]}]({link})\n⏳ الوقت : `{duration}`\n🎬 المصدر : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 المشاهدات : `{views}`\n\n💌 بواسطة : @aprilmubot'
+        rep = f'🎧 الأغنية : [{title[:35]}]({link})\n⏳ الوقت : `{duration}`\n🎬 المصدر : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 المشاهدات : `{views}`\n\n💌 بواسطة : @EmCaMusicBot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -64,7 +64,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('- حدث خطأ تواصل مع مطوري : @ccbee 🤍')
+        m.edit('- حدث خطأ تواصل مع مطوري : @PcPeP 🤍')
         print(e)
     try:
         os.remove(audio_file)
