@@ -63,18 +63,18 @@ def get_file_id(msg: Message):
     & ~filters.edited
 )
 async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = None):
-    usr = await client.get_users(5946704196)
+    usr = await client.get_users(5791673201)
     name = usr.first_name
-    async for photo in client.iter_profile_photos(5946704196, limit=1):
-                    await message.reply_photo(photo.file_id,   caption="- Join To Channel : @sspaa .",
+    async for photo in client.iter_profile_photos(5791673201, limit=1):
+                    await message.reply_photo(photo.file_id,   caption="- Join To Channel : @sspaa , @WoPictures",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"tg://user?id=5946704196")
+                        name, url=f"tg://user?id=5791673201")
                 ],[
                     InlineKeyboardButton(
-                        "‹ ضيفني لكروبك ›", url=f"https://t.me/AprilMubot?startgroup=true"),
+                        "‹ ضيفني لكروبك ›", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
                 ],
             ]
         ),
