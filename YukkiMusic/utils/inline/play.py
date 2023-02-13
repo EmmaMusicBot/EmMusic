@@ -254,20 +254,20 @@ def panel_markup_2(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="• كتم •", callback_data=f"ADMIN Mute|{chat_id}"
+                text="🔇", callback_data=f"ADMIN Mute|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="• كمل •",
+                text="🔉",
                 callback_data=f"ADMIN Unmute|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="• خلط •",
+                text="🔀",
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="• دمج •", callback_data=f"ADMIN Loop|{chat_id}"
+                text="🔁", callback_data=f"ADMIN Loop|{chat_id}"
             ),
         ],
         [
