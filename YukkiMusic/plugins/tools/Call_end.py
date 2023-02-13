@@ -21,6 +21,9 @@ async def bablo(client: Client, message: Message):
 @app.on_message(command("ايما"))
 async def throw_dice(client, message: Message): 
     await message.reply_text("عيونها")
+@app.on_message(command(["نورت","نورتي"]))
+async def throw_dice(client, message: Message): 
+    await message.reply_text("نورك عمري")
 @app.on_message(command("هلا"))
 async def throw_dice(client, message: Message): 
     await message.reply_text("هلا فيك/ي عمري .")
@@ -135,7 +138,9 @@ async def throw_dice(client, message: Message):
 @app.on_message(command("تفو"))
 async def throw_dice(client, message: Message): 
     await message.reply_text("قليل ادب 🙂.")
-
+@app.on_message(command("قناتي"))
+async def throw_dice(client, message: Message): 
+    await message.reply_text("@sspaa,@wopictures")
 @app.on_message(command(["متتت"])
     & filters.group
     & ~filters.edited
@@ -147,11 +152,11 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ ضيفني لكروبك ›", url=f"https://t.me/AprilMubot?startgroup=true",
+                InlineKeyboardButton("‹ ضيفني لكروبك ›", url=f"t.me/EmCaMusicBot?startgroup=true",
                 ),
             ],
             [
-                InlineKeyboardButton("‹ دخول البوت ›", url=f"https://t.me/aprilMubot"),
+                InlineKeyboardButton("‹ دخول البوت ›", url=f"t.me/EmCaMusicBot"),
             ],
             ]
         ),
