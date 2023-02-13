@@ -85,11 +85,11 @@ def get_file_id(msg: Message):
 
 async def khalid(client: Client, message: Message):
 
-    usr = await client.get_users(5769323463)
+    usr = await client.get_users(6292399606)
 
     name = usr.first_name
 
-    async for photo in client.iter_profile_photos(5769323463, limit=1):
+    async for photo in client.iter_profile_photos(6292399606, limit=1):
 
                     await message.reply_photo(photo.file_id,       caption=f"- هلا عمري {message.from_user.mention}\n- اسمي ايما ، أضغط على الزر لتشوف اوامري.", 
 
@@ -101,13 +101,13 @@ async def khalid(client: Client, message: Message):
 
                     InlineKeyboardButton(
 
-                      "- الأوامر .", url=f"https://t.me/AprilMubot?start=help") 
+                      "- الأوامر .", url=f"https://t.me/@mCaMusicBot?start=help") 
 
                 ],[
 
                     InlineKeyboardButton(
 
-                       "- ضيفني لكروبك .", url=f"https://t.me/AprilMubot?startgroup=true"),
+                       "- ضيفني لكروبك .", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
 
                 ],
 
