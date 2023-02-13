@@ -21,7 +21,7 @@ async def bablo(client: Client, message: Message):
 @app.on_message(command("ايما"))
 async def throw_dice(client, message: Message): 
     await message.reply_text("عيونها")
-@app.on_message(command(["هه","ههه","ههههه"))
+@app.on_message(command(["هه","ههه","ههههه"]))
 async def throw_dice(client, message: Message): 
     await message.reply_text("احلى ضحكة والله 💋🤍")
 @app.on_message(command(["نورت","نورتي"]))
