@@ -8,7 +8,7 @@ hachoir
 lyricsgenius
 git+https://github.com/mongodb/motor
 git+https://github.com/python-pillow/Pillow
-
+git+https://github.com/giampaolo/psutil
 py-tgcalls==0.8.6
 pykeyboard
 pyrogram==1.4.16
