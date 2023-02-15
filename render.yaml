@@ -55,10 +55,6 @@ services:
 
         sync: false
 
-      - key: MONGO_DB_URI
-        
-        sync: false
-
 
         fromDatabase:
 
