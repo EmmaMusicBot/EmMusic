@@ -30,9 +30,9 @@ def start_pannel(_):
 
             InlineKeyboardButton(
 
-                text="‹ قناة ايما ›",
+                text="‹ قناة البوت›",
 
-                url=f"https://t.me/sspaa",
+                url=f"https://t.me/D_33_D",
 
             ),
 
