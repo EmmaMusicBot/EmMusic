@@ -101,7 +101,7 @@ async def khalid(client: Client, message: Message):
 
                     InlineKeyboardButton(
 
-                      "- الأوامر .", url=f"https://t.me/@mCaMusicBot?start=help") 
+                      "- الأوامر .", url=f"https://t.me/EmCaMusicBot?start=help") 
 
                 ],[
 
