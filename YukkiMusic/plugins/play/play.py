@@ -40,7 +40,7 @@ force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"🦋 ʚɞ 🦋", url=f"t.me/D_33_D",)                        
+              text=f"- وَهم .", url=f"t.me/D_33_D",)                        
         ],        
     ]
 )
