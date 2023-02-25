@@ -39,7 +39,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=f"🦋 ʚɞ 🦋", url=f"t.me/D_33_D",
+                text=f"- وَهم .", url=f"t.me/D_33_D",
             )
         ],
     ]
