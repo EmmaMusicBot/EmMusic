@@ -66,12 +66,12 @@ async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = Non
     usr = await client.get_users(5791673201)
     name = usr.first_name
     async for photo in client.iter_profile_photos(5791673201, limit=1):
-                    await message.reply_photo(photo.file_id,   caption="ترا أنا بتخطى بسرعة، بس بحب ساوي دراما : @D_33_D",
+                    await message.reply_photo(photo.file_id,   caption="my channel : @d_33_d 💭.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"tg://user?id=5791673201")
+                        name, url=f"t.me/d_22_d")
                 ],[
                     InlineKeyboardButton(
                         "‹ ضيفني لكروبك ›", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
