@@ -24,7 +24,10 @@ def song_markup(_, vidid):
         ],
         [
             InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"], callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close",
+            ),
+            InlineKeyboardButton(
+                text="- وَهم .", url="t.me/d_33_d"
             ),
         ],
     ]
