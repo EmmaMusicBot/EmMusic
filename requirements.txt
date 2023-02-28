@@ -8,7 +8,7 @@ gitpython
 hachoir
 lyricsgenius
 motor==3.0.0
-Pillow
+git+https://github.com/python-pillow/Pillow.git
 psutil
 git+https://github.com/pytgcalls/pytgcalls
 pykeyboard
