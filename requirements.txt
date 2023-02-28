@@ -12,7 +12,7 @@ Pillow
 psutil
 git+https://github.com/pytgcalls/pytgcalls
 pykeyboard
-pyrogram==1.4.16
+git+https://github.com/pyrogram/pyrogram
 python-dotenv
 pyyaml==5.3.1
 requests
