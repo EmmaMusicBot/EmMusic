@@ -1,7 +1,7 @@
 aiofiles
 aiohttp
 asyncio
-dnspython
+git+https://github.com/rthalley/dnspython.git
 heroku3
 ffmpeg-python
 gitpython
