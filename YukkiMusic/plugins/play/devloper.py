@@ -43,11 +43,11 @@ def get_file_id(msg: Message):
             "video",
             "video_note",
             "voice",
-            # "contact",
-            # "dice",
-            # "poll",
-            # "location",
-            # "venue",
+            "contact",
+            "dice",
+            "poll",
+            "location",
+            "venue",
             "sticker",
         ):
             obj = getattr(msg, message_type)
@@ -65,13 +65,14 @@ def get_file_id(msg: Message):
 async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = None):
     usr = await client.get_users(5791673201)
     name = usr.first_name
+    bio = await client.get_chat(5791673201).bio
     async for photo in client.iter_profile_photos(5791673201, limit=1):
-                    await message.reply_photo(photo.file_id,   caption="my channel : @d_33_d 💭.",
+                    await message.reply_photo(photo.file_id,   caption=f"{bio}",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"t.me/d_22_d")
+                        name, user_id=5791673201)
                 ],[
                     InlineKeyboardButton(
                         "‹ ضيفني لكروبك ›", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
