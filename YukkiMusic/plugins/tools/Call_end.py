@@ -212,11 +212,11 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-@app.on_message(command("مين بالمكالمه")) 
+@jepiq.ar_cmd(pattern="معلومات_المكالمة")
 
 async def info_vc(event):
 
-    vc_chat = await app.get_entity(event.chat_id)
+    vc_chat = await jepiq.get_entity(event.chat_id)
 
     gc_call = await chat_vc_checker(event, vc_chat)
 
@@ -226,7 +226,7 @@ async def info_vc(event):
 
     await edit_or_reply(event, "**- جار جلب معلومات المكالمة انتظر قليلا**")
 
-    call_details = await app(
+    call_details = await jepiq(
 
         functions.phone.GetGroupCallRequest(call=gc_call, limit=1)
 
