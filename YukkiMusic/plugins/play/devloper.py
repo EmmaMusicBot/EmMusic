@@ -67,7 +67,7 @@ async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = Non
     name = usr.first_name
     bio = (await client.get_chat(5791673201)).bio
     async for photo in client.iter_profile_photos(5791673201, limit=1):
-                    await message.reply_photo(photo.file_id,   caption=f"{bio}",
+                    await message.reply_photo(photo.file_id,   caption=f"✦ البايو : {bio}",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
