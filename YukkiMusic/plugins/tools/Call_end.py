@@ -212,7 +212,7 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-@app.on_message(command("مين بالمكالمه")
+@app.on_message(command("مين بالمكالمه")) 
 
 async def info_vc(event):
 
