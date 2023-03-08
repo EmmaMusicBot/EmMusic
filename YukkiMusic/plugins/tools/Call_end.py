@@ -212,3 +212,40 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
+@app.on_message(command("مين بالمكالمه")
+
+async def info_vc(event):
+
+    vc_chat = await app.get_entity(event.chat_id)
+
+    gc_call = await chat_vc_checker(event, vc_chat)
+
+    if not gc_call:
+
+        return
+
+    await edit_or_reply(event, "**- جار جلب معلومات المكالمة انتظر قليلا**")
+
+    call_details = await app(
+
+        functions.phone.GetGroupCallRequest(call=gc_call, limit=1)
+
+    )
+
+    grp_call = "**معلومات مكالمة المجموعة**\n\n"
+
+    grp_call += f"**العنوان :** {call_details.call.title}\n"
+
+    grp_call += f"**عدد المشاركين :** {call_details.call.participants_count}\n\n"
+
+    if call_details.call.participants_count > 0:
+
+        grp_call += "**المشاركون**\n"
+
+        for user in call_details.users:
+
+            nam = f"{user.first_name or ''} {user.last_name or ''}"
+
+            grp_call += f"  ● {mentionuser(nam,user.id)} - `{user.id}`\n"
+
+    await edit_or_reply(event, grp_call)
