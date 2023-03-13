@@ -63,16 +63,16 @@ def get_file_id(msg: Message):
     & ~filters.edited
 )
 async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = None):
-    usr = await client.get_users(5791673201)
+    usr = await client.get_users(6201061981)
     name = usr.first_name
-    bio = (await client.get_chat(5791673201)).bio
-    async for photo in client.iter_profile_photos(5791673201, limit=1):
-                    await message.reply_photo(photo.file_id,   caption=f"✦ البايو : {bio}",
+    bio = (await client.get_chat(6201061981)).bio
+    async for photo in client.iter_profile_photos(6201061981, limit=1):
+                    await message.reply_photo(photo.file_id,   caption=f"✦المطوࢪ: @DD_CO\n✦ البايو : {bio}",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, user_id=5791673201)
+                        name, user_id=6201061981)
                 ],[
                     InlineKeyboardButton(
                         "‹ ضيفني لكروبك ›", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
